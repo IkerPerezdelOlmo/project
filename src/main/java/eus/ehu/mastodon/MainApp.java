@@ -33,7 +33,8 @@ public class MainApp {
 
     }
     public static void main(String[] args) {
-        String test = request("accounts/verify_credentials");
+        // String test = request("accounts/verify_credentials");
+        String test = request("timelines/public");
         System.out.println(test);
     }
 }
