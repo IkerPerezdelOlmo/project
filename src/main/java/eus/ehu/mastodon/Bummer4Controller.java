@@ -94,8 +94,8 @@ public class Bummer4Controller {
         jsonArray=gson.fromJson(body, JsonArray.class);
         statusList= new TypeToken<ArrayList<Status>>() {}.getType();
         list=new ArrayList<Status>(gson.fromJson(jsonArray.getAsJsonArray(), statusList));
-        showToot();
         toot.getEngine().getLoadWorker().stateProperty().addListener(new HyperLinkRedirectListener(toot));
+        showToot();
 
     }
 
