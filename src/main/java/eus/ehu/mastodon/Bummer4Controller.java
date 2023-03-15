@@ -77,7 +77,6 @@ public class Bummer4Controller {
         publicationDateField.setText(status.created_at);
         toot.getEngine().loadContent(status.content);
         authorNameValue.setText(status.account.display_name);
-        toot.getEngine().getLoadWorker().stateProperty().addListener(new HyperLinkRedirectListener(toot));
 
 
     }
@@ -96,6 +95,8 @@ public class Bummer4Controller {
         statusList= new TypeToken<ArrayList<Status>>() {}.getType();
         list=new ArrayList<Status>(gson.fromJson(jsonArray.getAsJsonArray(), statusList));
         showToot();
+        toot.getEngine().getLoadWorker().stateProperty().addListener(new HyperLinkRedirectListener(toot));
+
     }
 
 }
