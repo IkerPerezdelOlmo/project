@@ -1,10 +1,7 @@
 package eus.ehu.mastodon;
 
 import java.lang.reflect.Type;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -17,7 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.web.WebView;
 
-public class HelloController {
+public class Bummer4Controller {
     private ArrayList<Status> list;
     private Type statusList;
     private JsonArray jsonArray;
@@ -80,6 +77,8 @@ public class HelloController {
         publicationDateField.setText(status.created_at);
         toot.getEngine().loadContent(status.content);
         authorNameValue.setText(status.account.display_name);
+        toot.getEngine().getLoadWorker().stateProperty().addListener(new HyperLinkRedirectListener(toot));
+
 
     }
     Status getToot(Status status){
