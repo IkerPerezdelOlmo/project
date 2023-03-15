@@ -1,13 +1,13 @@
 package eus.ehu.mastodon;
 
-import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import java.io.IOException;
 
-public class MainApp {
-    private static String request(String endpoint) {
+public class HttpMethods {
+    public static String request(String endpoint) {
 
         String result = "not good";
 
@@ -24,17 +24,11 @@ public class MainApp {
             if (response.code() == 200) {
                 result = response.body().string();
             }
-            result = response.body().string();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         return result;
 
-    }
-    public static void main(String[] args) {
-        // String test = request("accounts/verify_credentials");
-        String test = request("timelines/public");
-        System.out.println(test);
     }
 }

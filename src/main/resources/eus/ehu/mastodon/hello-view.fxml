@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="eus.ehu.mastodon.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eus.ehu.mastodon.HelloController">
+    <children>
+        <Label layoutX="75.0" layoutY="69.0" prefHeight="18.0" prefWidth="82.0" text="Original autor:" />
+        <TextField fx:id="authorNameValue" layoutX="202.0" layoutY="65.0" prefHeight="26.0" prefWidth="219.0" />
+        <CheckBox fx:id="boost" layoutX="458.0" layoutY="70.0" mnemonicParsing="false" text="Boosted" />
+        <Label layoutX="75.0" layoutY="120.0" text="Publication date:" />
+        <TextField fx:id="publicationDateField" layoutX="202.0" layoutY="116.0" prefHeight="26.0" prefWidth="307.0" />
+        <Label layoutX="75.0" layoutY="170.0" text="Toot:" />
+        <Button fx:id="previousButton" layoutX="202.0" layoutY="348.0" mnemonicParsing="false" onAction="#previousButtonPressed" text="Previous" />
+        <Button fx:id="nextButton" layoutX="458.0" layoutY="348.0" mnemonicParsing="false" onAction="#nextButtonPressed" text="Next" />
+        <WebView fx:id="toot" layoutX="202.0" layoutY="159.0" prefHeight="150.0" prefWidth="307.0" />
+      <Label fx:id="errorLabel" layoutX="26.0" layoutY="217.0" prefHeight="43.0" prefWidth="132.0" />
+    </children>
+</AnchorPane>
