@@ -13,6 +13,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.web.WebView;
+import social.bigbone.api.entity.Status;
 
 public class Bummer4Controller {
     private ArrayList<Status> list;
@@ -67,22 +68,22 @@ public class Bummer4Controller {
     }
     void showToot(){
         Status status=list.get(tootPosition);
-        if( status.reblog!=null) {
+        if( status.getReblog()!=null) {
             boost.setSelected(true);
             status = getToot(status);
 
         }
         else
             boost.setSelected(false);
-        publicationDateField.setText(status.created_at);
-        toot.getEngine().loadContent(status.content);
-        authorNameValue.setText(status.account.display_name);
+        publicationDateField.setText(status.getCreatedAt());
+        toot.getEngine().loadContent(status.getContent());
+        authorNameValue.setText(status.getAccount().getDisplayName());
 
 
     }
     Status getToot(Status status){
-        if( status.reblog!=null){
-            return status.reblog;
+        if( status.getReblog()!=null){
+            return status.getReblog();
         }
         return status;
     }

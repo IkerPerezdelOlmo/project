@@ -8,6 +8,8 @@ module eus.ehu.mastodon {
     requires com.google.gson;
     requires java.desktop;
     requires jdk.xml.dom;
+    requires bigbone;
+
 
     opens eus.ehu.mastodon to javafx.fxml;
     exports eus.ehu.mastodon;

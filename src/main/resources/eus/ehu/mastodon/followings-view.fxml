@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+    <Label layoutX="322.0" layoutY="22.0" prefHeight="18.0" prefWidth="53.0" text="name" />
+    <TextField fx:id="authorNameValue" layoutX="300.0" layoutY="40.0" prefHeight="26.0" prefWidth="114.0" />
+    <Label layoutX="53.0" layoutY="14.0" text="avatar" />
+    <Label fx:id="errorLabel" layoutX="26.0" layoutY="217.0" prefHeight="43.0" prefWidth="132.0" />
+      <ImageView fx:id="avatarImage" fitHeight="60.0" fitWidth="106.0" layoutX="16.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="158.0" layoutY="23.0" text="account name" />
+      <TextField fx:id="acccountName" layoutX="128.0" layoutY="41.0" />
+      <Button fx:id="disableFollowingBut" layoutX="463.0" layoutY="27.0" mnemonicParsing="false" onAction="#disableFollowing" text="disable following" />
+</children>
+</AnchorPane>

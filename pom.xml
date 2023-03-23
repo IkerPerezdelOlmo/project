@@ -13,7 +13,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.9.1</junit.version>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>maven-central-snapshots</id>
+            <name>Maven Central Snapshot Repository</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -57,6 +69,16 @@
             <artifactId>gson</artifactId>
             <version>2.8.9</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>social.bigbone</groupId>
+            <artifactId>bigbone</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>social.bigbone</groupId>
+            <artifactId>bigbone-rx</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
